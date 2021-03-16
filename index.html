@@ -1,41 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="Assets/style.css">
     <title>Hotstocks</title>
 </head>
+
 <body>
     <!-- Body -->
     <div class="container">
-     
-     <!--  Hotstocks Title -->
-    <nav>
-         Hots tonks
-     </nav>
-    
-        <!-- Top   -->
-       <div class="container" id="liveStock"></div> 
-        <h1>Livestock Ticker</h1>
-       
-      
-      
-        <!-- Left Bottom -->
-        <div class="container"  id="topStocks"></div>
-        <h2>Top Stock Changes Of The Day</h2>
-          
 
-            <!-- Right Bottom -->
-            <div class="container" id="watchList"></div>
-            <h3>User Watch livestock</h3>
-          
-          
-            <label for="firstStock "> first stock</label>
-                <input type="text" id="firstStock" name="Apple"><br><br>
-                <button>Save</button>
-        </div>   
+        <!--  Hotstocks Title -->
+        <nav>
+
+        </nav>
+
+        <!-- Top   -->
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <h1>Livestock Ticker</h1>
+
+                    <div id="liveStock"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Right Bottom -->
+
+
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <h2>Hot Stocks Of The Day</h2>
+                    <div id="topStocks"></div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="column">
+                <form class="box">
+                    <div class="field">
+                        <label class="label">First Stock</label>
+                        <div class="control">
+                            <input class="stock" type="Stock" placeholder="Enter your stock here">
+                        </div>
+                    </div>
+
+
+                    <button class="button is-primary">Add to WatchList</button>
+                </form>
+
+
+
+                <div class="box">
+                    <h3>User Watch List</h3>
+                    <div id="watchList"></div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
 
 
 </body>
+
+<script src="Assets/hotstocks.js"></script>
+
 </html>
