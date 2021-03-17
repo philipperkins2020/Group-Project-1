@@ -7,92 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="Assets/style.css">
-    <title>Hotstocks</title>
+    <title>HOTSTOCKS</title>
+    <link rel="icon" href="assets/favicon.png">
 </head>
 
 <body>
     <!-- Body -->
     <div class="container">
 
-        <!--  Hotstocks Title -->
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                  <a class="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-                  </a>
+      <!-- Nav Bar -->
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-logo" href="">
+            <img src="assets/hotstocks_logo_transp.png">
+          </a>
               
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                  </a>
-                </div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
               
-                <div id="navbarBasicExample" class="navbar-menu">
-                  <div class="navbar-start">
-                    <a class="navbar-item">
-                      Home
-                    </a>
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Stocks Of The Day
+            </a>
               
-                    <a class="navbar-item">
-                      Documentation
-                    </a>
+            <a class="navbar-item">
+              Cryptocurrencies
+            </a>
               
-                    <div class="navbar-item has-dropdown is-hoverable">
-                      <a class="navbar-link">
-                        More
-                      </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+              Watch List
+          </a>
               
-                      <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                          About
-                        </a>
-                        <a class="navbar-item">
-                          Jobs
-                        </a>
-                        <a class="navbar-item">
-                          Contact
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                          Report an issue
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+              Stocks
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+              Cryptocurrencies
+          </a>
+           </div>
+          </div>
+        </div>
               
-                  <div class="navbar-end">
-                    <div class="navbar-item">
-                      <div class="buttons">
-                        <a class="button is-primary">
-                          <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                          Log in
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-        <!-- Top   -->
+        <!-- Ticker -->
         <div class="columns">
             <div class="column">
                 <div class="box">
-                    <h1>Livestock Ticker</h1>
-
-                    <div id="liveStock"></div>
+                    <h1>Real-Time Stock Ticker</h1>
+                  <div id="liveStock"></div>
                 </div>
             </div>
         </div>
 
-
-
-
-        <!-- Right Bottom -->
-
-
+        <!-- Stocks of the day -->
         <div class="columns">
             <div class="column">
                 <div class="box">
@@ -101,41 +90,25 @@
                 </div>
             </div>
 
-
-
-
-
             <div class="column">
-                <form class="box">
-                    <div class="field">
-                        <label class="label">First Stock</label>
-                        <div class="control">
-                            <input class="stock" type="Stock" placeholder="Enter your stock here">
-                        </div>
+              <form class="box">
+                <div class="field">
+                  <label class="label">Stocks to Watch</label>
+                    <div class="control">
+                      <input class="stock" type="Stock" placeholder="Enter Your Stock Here">
                     </div>
-
-
-                    <button class="button is-primary">Add to WatchList</button>
-                </form>
-
-
-
-                <div class="box">
-                    <h3>User Watch List</h3>
-                    <div id="watchList"></div>
-
                 </div>
+                  <button class="button is-primary">Add to Watch List</button>
+              </form>
 
-            </div>
-
-
-
-
-
+        <!-- Watch List -->
+        <div class="box">
+          <h3>User Watch List</h3>
+          <div id="watchList"></div>
         </div>
-
+      </div>
     </div>
-
+  </div>
 
 </body>
 
