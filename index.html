@@ -83,31 +83,66 @@
 
         <!-- Stocks of the day -->
         <div class="columns">
-            <div class="column">
+            <div class="column is-half">
                 <div class="box">
                     <h2>Hot Stocks Of The Day</h2>
                     <div id="topStocks"></div>
                 </div>
             </div>
 
+            
             <div class="column">
-              <form class="box">
-                <div class="field">
-                  <label class="label">Stocks to Watch</label>
-                    <div class="control">
-                      <input class="stock" type="Stock" placeholder="Enter Your Stock Here">
+                <form class="box">
+                  <div class="field">
+                    <label class="label">Stocks to Watch</label>
+                      <div class="control">
+                        <input class="stock" type="Stock" placeholder="Enter Your Stock Here"> 
                     </div>
+                  </div>
+                    <button class="button is-primary">Add to Watch List</button>
+                </form>
+        
+             </div>
+             <div class="column">
+                <form class="box">
+                  <div class="field">
+                    <label class="label">Cryptocurrencies to Watch</label>
+                      <div class="control">
+                        <input class="stock" type="Stock" placeholder="Enter Your Cryptocurrencies Here"> 
+                    </div>
+                  </div>
+                    <button class="button is-primary">Add to Watch List</button>
+                </form>
+        
+             </div>
+            
+            
+            
+            
+            </div>
+            
+            
+              <div class="columns">
+              <div class="column is-half">
+                <div class="box">
+                  <h3>Cryptocurrencies</h3>
+                  <div id="crypto"></div>
+                  </div>
                 </div>
-                  <button class="button is-primary">Add to Watch List</button>
-              </form>
+              
+            
 
-        <!-- Watch List -->
-        <div class="box">
-          <h3>User Watch List</h3>
+       
+             <!-- Watch List -->
+                
+             <div class="column is-half">
+             <div class="box">
+          <h4>User Watch List</h4>
           <div id="watchList"></div>
         </div>
       </div>
     </div>
+        
   </div>
 
 </body>
