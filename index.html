@@ -32,11 +32,11 @@
         <div id="navbarMenu" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item">
-              Stocks Of The Day
+              Trending Stocks
             </a>
               
             <a class="navbar-item">
-              Cryptocurrencies
+              Trending Cryptocurrencies
             </a>
               
         <div class="navbar-item has-dropdown is-hoverable">
@@ -50,7 +50,7 @@
           </a>
           <hr class="navbar-divider">
           <a class="navbar-item">
-              Cryptocurrencies
+              Cryptocurrencies 
           </a>
            </div>
           </div>
@@ -59,10 +59,10 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-primary">
+                <a class="button is-danger" id="stockButton">
                   <strong>Sign up</strong>
                 </a>
-                <a class="button is-light">
+                <a class="button is-danger" id="stockButton">
                   Log in
                 </a>
               </div>
@@ -85,7 +85,7 @@
         <div class="columns">
             <div class="column is-half">
                 <div class="box">
-                    <h2>Hot Stocks Of The Day</h2>
+                    <h2>Trending Stocks</h2>
                     <div id="topStocks"></div>
                 </div>
             </div>
@@ -96,10 +96,10 @@
                   <div class="field">
                     <label class="label">Stocks to Watch</label>
                       <div class="control">
-                        <input class="stock" type="Stock" placeholder="Enter Your Stock Here"> 
+                        <input id= "stockInput" class="stock" type="Stock" placeholder="Enter Your Stock Here"> 
                     </div>
                   </div>
-                    <button class="button is-primary">Add to Watch List</button>
+                    <button id="stockButton" class="button is-danger">Add to Watch List</button>
                 </form>
         
              </div>
@@ -108,10 +108,10 @@
                   <div class="field">
                     <label class="label">Cryptocurrencies to Watch</label>
                       <div class="control">
-                        <input class="stock" type="Stock" placeholder="Enter Your Cryptocurrencies Here"> 
+                        <input id="cryptoInput"  class="stock" type="Stock" placeholder="Enter Your Cryptocurrencies Here"> 
                     </div>
                   </div>
-                    <button class="button is-primary">Add to Watch List</button>
+                    <button id="cryptoButton" class="button is-danger">Add to Watch List</button>
                 </form>
         
              </div>
@@ -125,7 +125,7 @@
               <div class="columns">
               <div class="column is-half">
                 <div class="box">
-                  <h3>Cryptocurrencies</h3>
+                  <h3>Trending Cryptocurrencies</h3>
                   <div id="crypto"></div>
                   </div>
                 </div>
