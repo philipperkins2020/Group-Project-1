@@ -59,10 +59,10 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-primary">
+                <a class="button is-danger">
                   <strong>Sign up</strong>
                 </a>
-                <a class="button is-light">
+                <a class="button is-danger">
                   Log in
                 </a>
               </div>
@@ -80,6 +80,14 @@
                 </div>
             </div>
         </div>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+                <h1>Real-Time Crypto Exchange Ticker</h1>
+              <div id="cryptoTick"></div>
+            </div>
+          </div>
+          </div>
 
         <!-- Stocks of the day -->
         <div class="columns">
@@ -96,10 +104,10 @@
                   <div class="field">
                     <label class="label">Stocks to Watch</label>
                       <div class="control">
-                        <input class="stock" type="Stock" placeholder="Enter Your Stock Here"> 
+                        <input class="stock" id="stockInput" type="Stock" placeholder="Enter Your Stock Here"> 
                     </div>
                   </div>
-                    <button class="button is-primary">Add to Watch List</button>
+                    <button class="button is-danger" id="stockButton">Add to Watch List</button>
                 </form>
         
              </div>
@@ -111,7 +119,7 @@
                         <input class="stock" type="Stock" placeholder="Enter Your Cryptocurrencies Here"> 
                     </div>
                   </div>
-                    <button class="button is-primary">Add to Watch List</button>
+                    <button class="button is-danger">Add to Watch List</button>
                 </form>
         
              </div>
