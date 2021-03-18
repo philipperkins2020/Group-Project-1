@@ -1,0 +1,7 @@
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: #f14668;
+  }
