@@ -4,3 +4,7 @@
 .navbar-link:not(.is-arrowless)::after {
     border-color: #f14668;
   }
+
+.stock-item {
+    flex-flow: column;
+}

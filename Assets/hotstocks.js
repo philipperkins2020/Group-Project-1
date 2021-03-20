@@ -1,3 +1,5 @@
+var apiKey = "mpKK72CcnhxsE_y4YCUv";
+
 // Save var
 function saveStock(event) {
     event.preventDefault()
@@ -26,15 +28,43 @@ function cryptoValue() {
 console.log(cryptoValue());
 document.getElementById("cryptoButton").addEventListener("click", saveCrypto)
 
-function getStocks() {
-    var apiKey = "mpKK72CcnhxsE_y4YCUv";
-    var stock = "AAPL";
-    var url = `https://www.quandl.com/api/v3/datasets/WIKI/${stock}.json?start_date=2016-10-01&end_date=2017-10-01&api_key=${apiKey}`;
-    fetch(url).then(function(response) {
-      return response.json();
-    }).then(function(data){
-      console.log(data);
-      const columnNames = data.column_names;
-      const info = data.data;
-    }); 
-    }
+function getHeaderStocks() {
+    var stockItems = document.querySelectorAll('.stock-item');
+    stockItems.forEach(item => {
+        var dataItem = item.querySelector('.stock-data');
+        var ticker = dataItem.getAttribute('data-stock-id');
+        var elStockPrice = dataItem.querySelector('span');
+        console.log('TICKER', ticker);
+        getStock(ticker, elStockPrice);
+    });
+    // console.log('STOCK ITEMS: ', stockItems);
+}
+
+function getStock(ticker, el) {
+    var url = `https://www.quandl.com/api/v3/datasets/WIKI/${ticker}.json?start_date=2021-03-19&end_date=2021-03-20&api_key=${apiKey}`;
+    fetch(url).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        console.log('DATA FOR ' + ticker, data);
+        // update the element with the correct stock price
+        el.textContent = 'NEW PRICE...';
+    });
+}
+
+// function getStocks() {
+//     var apiKey = "mpKK72CcnhxsE_y4YCUv";
+//     var stock = "AAPL";
+//     var url = `https://www.quandl.com/api/v3/datasets/WIKI/${stock}.json?start_date=2016-10-01&end_date=2017-10-01&api_key=${apiKey}`;
+//     const ticker = document.getElementById("liveStock");
+//     fetch(url).then(function (response) {
+//         return response.json();
+//     }).then(function (data) {
+//         console.log(data);
+//         const columnNames = data.column_names;
+//         const info = data.data;
+//         ticker = document.getElementById("liveStock")
+
+//     });
+// }
+
+getHeaderStocks();
