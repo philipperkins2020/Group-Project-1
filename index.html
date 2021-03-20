@@ -15,68 +15,68 @@
     <!-- Body -->
     <div class="container">
 
-      <!-- Nav Bar -->
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-logo" href="">
-            <img src="assets/hotstocks_logo_transp.png">
-          </a>
-              
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-              
-        <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Stocks Of The Day
-            </a>
-              
-            <a class="navbar-item">
-              Cryptocurrencies
-            </a>
-              
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-              Watch List
-          </a>
-              
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-              Stocks
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-              Cryptocurrencies
-          </a>
-           </div>
-          </div>
-        </div>
-              
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
+        <!-- Nav Bar -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-logo" href="">
+                    <img src="assets/hotstocks_logo_transp.png">
                 </a>
-                <a class="button is-light">
-                  Log in
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
-              </div>
             </div>
-          </div>
-        </div>
-      </nav>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Stocks Of The Day
+                    </a>
+
+                    <a class="navbar-item">
+                        Cryptocurrencies
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Watch List
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Stocks
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Cryptocurrencies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
         <!-- Ticker -->
         <div class="columns">
             <div class="column">
                 <div class="box">
                     <h1>Real-Time Stock Ticker</h1>
-                  <div id="liveStock"></div>
+                    <div id="liveStock"></div>
                 </div>
             </div>
         </div>
@@ -90,60 +90,75 @@
                 </div>
             </div>
 
-            
+
             <div class="column">
                 <form class="box">
-                  <div class="field">
-                    <label class="label">Stocks to Watch</label>
-                      <div class="control">
-                        <input class="stock" type="Stock" placeholder="Enter Your Stock Here"> 
+                    <div class="field">
+                        <label class="label">Stocks to Watch</label>
+                        <div class="control">
+                            <input id="stockInput" class="stock" type="Stock" placeholder="Enter Your Stock Here">
+                            <input id="stockInputTwo" class="stock" type="Stock" placeholder="Enter Your Stock Here">
+                        </div>
                     </div>
-                  </div>
-                    <button class="button is-primary">Add to Watch List</button>
-                </form>
-        
-             </div>
-             <div class="column">
-                <form class="box">
-                  <div class="field">
-                    <label class="label">Cryptocurrencies to Watch</label>
-                      <div class="control">
-                        <input class="stock" type="Stock" placeholder="Enter Your Cryptocurrencies Here"> 
-                    </div>
-                  </div>
-                    <button class="button is-primary">Add to Watch List</button>
-                </form>
-        
-             </div>
-            
-            
-            
-            
-            </div>
-            
-            
-              <div class="columns">
-              <div class="column is-half">
-                <div class="box">
-                  <h3>Cryptocurrencies</h3>
-                  <div id="crypto"></div>
-                  </div>
-                </div>
-              
-            
+                    <button id="stockButton" class="button is-primary">Add to Watch List</button>
 
-       
-             <!-- Watch List -->
-                
-             <div class="column is-half">
-             <div class="box">
-          <h4>User Watch List</h4>
-          <div id="watchList"></div>
+                </form>
+
+            </div>
+            <div class="column">
+                <form class="box">
+                    <div class="field">
+                        <label class="label">Cryptocurrencies to Watch</label>
+                        <div class="control">
+                            <input id="cryptoInput" class="stock" type="Stock"
+                                placeholder="Enter Your Cryptocurrencies Here">
+                            <input id="cryptoInputTwo" class="stock" type="Stock"
+                                placeholder="Enter Your Cryptocurrencies Here">
+                        </div>
+                    </div>
+                    <button id="cryptoButton" class="button is-primary">Add to Watch List</button>
+                </form>
+
+            </div>
+
+
+
         </div>
-      </div>
+
+
+        <div class="columns">
+            <div class="column is-half">
+                <div class="box">
+                    <h3>Cryptocurrencies</h3>
+                    <div id="crypto"></div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Watch List -->
+
+            <div class="column is-half">
+                <div class="box">
+                    <h4>User Watch List</h4>
+                    <div id="watchList"></div>
+                    <br>
+                    <Ul>
+                        <li id="saved-StockOne"></li>
+                        <br>
+                        <li id="saved-StockTwo"></li>
+                        <br>
+                        <li id="saved-CrypOne"></li>
+                        <br>
+                        <li id="saved-CrypTwo"></li>
+
+                    </Ul>
+                </div>
+            </div>
+        </div>
+
     </div>
-        
-  </div>
 
 </body>
 
