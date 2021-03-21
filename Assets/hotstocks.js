@@ -29,13 +29,14 @@ console.log(cryptoValue());
 document.getElementById("cryptoButton").addEventListener("click", saveCrypto)
 
 function getHeaderStocks() {
-    var stockItems = document.querySelectorAll('.stock-item');
+    var stockItems = stocks.tickers;
     stockItems.forEach(item => {
-        var dataItem = item.querySelector('.stock-data');
-        var ticker = dataItem.getAttribute('data-stock-id');
-        var elStockPrice = dataItem.querySelector('span');
-        console.log('TICKER', ticker);
-        getStock(ticker, elStockPrice);
+        console.log(item)
+        // var dataItem = item.querySelector('.stock-data');
+        // var ticker = dataItem.getAttribute('data-stock-id');
+        // var elStockPrice = dataItem.querySelector('span');
+        // console.log('TICKER', ticker);
+        // getStock(ticker, elStockPrice);
     });
     // console.log('STOCK ITEMS: ', stockItems);
 }
@@ -68,3 +69,4 @@ function getStock(ticker, el) {
 // }
 
 getHeaderStocks();
+console.log(stocks)
