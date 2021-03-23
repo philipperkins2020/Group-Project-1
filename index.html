@@ -15,146 +15,161 @@
     <!-- Body -->
     <div class="container">
 
-      <!-- Nav Bar -->
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-logo" href="">
-            <img src="assets/hotstocks_logo_transp.png">
-          </a>
-              
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-              
-        <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Stocks Of The Day
-            </a>
-              
-            <a class="navbar-item">
-              Cryptocurrencies
-            </a>
-              
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-              Watch List
-          </a>
-              
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-              Stocks
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-              Cryptocurrencies
-          </a>
-           </div>
-          </div>
-        </div>
-              
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-danger">
-                  <strong>Sign up</strong>
+        <!-- Nav Bar -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-logo" href="">
+                    <img src="assets/hotstocks_logo_transp.png">
                 </a>
-                <a class="button is-danger">
-                  Log in
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
-              </div>
             </div>
-          </div>
-        </div>
-      </nav>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Trending Stocks
+                    </a>
+
+                    <a class="navbar-item">
+                        Trending Cryptocurrencies
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Watch List
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Stocks
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Cryptocurrencies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-danger">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-danger">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
         <!-- Ticker -->
         <div class="columns">
             <div class="column">
                 <div class="box">
                     <h1>Real-Time Stock Ticker</h1>
-                  <div id="liveStock"></div>
+                    <div class="card">
+
+                        <div class="tcontainer">
+                            <div class="ticker-wrap">
+                                <div class="ticker-move">
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+
         <div class="columns">
-          <div class="column">
-            <div class="box">
-                <h1>Real-Time Crypto Exchange Ticker</h1>
-              <div id="cryptoTick"></div>
+            <div class="column">
+                <div class="box">
+                    <h1>Real-Time Crypto Exchange Ticker</h1>
+                    <div id="cryptoTick"></div>
+                </div>
             </div>
-          </div>
-          </div>
+        </div>
 
         <!-- Stocks of the day -->
         <div class="columns">
             <div class="column is-half">
                 <div class="box">
-                    <h2>Hot Stocks Of The Day</h2>
+                    <h2>Trending Stocks</h2>
                     <div id="topStocks"></div>
                 </div>
             </div>
 
-            
+
             <div class="column">
                 <form class="box">
-                  <div class="field">
-                    <label class="label">Stocks to Watch</label>
-                      <div class="control">
-                        <input class="stock" id="stockInput" type="Stock" placeholder="Enter Your Stock Here"> 
+                    <div class="field">
+                        <label class="label">Stocks to Watch</label>
+                        <div class="control">
+                            <input class="stock" id="stockInput" type="Stock" placeholder="Enter Your Stock Here">
+                        </div>
                     </div>
-                  </div>
                     <button class="button is-danger" id="stockButton">Add to Watch List</button>
                 </form>
-        
-             </div>
-             <div class="column">
-                <form class="box">
-                  <div class="field">
-                    <label class="label">Cryptocurrencies to Watch</label>
-                      <div class="control">
-                        <input class="stock" type="Stock" placeholder="Enter Your Cryptocurrencies Here"> 
-                    </div>
-                  </div>
-                    <button class="button is-danger">Add to Watch List</button>
-                </form>
-        
-             </div>
-            
-            
-            
-            
-            </div>
-            
-            
-              <div class="columns">
-              <div class="column is-half">
-                <div class="box">
-                  <h3>Cryptocurrencies</h3>
-                  <div id="crypto"></div>
-                  </div>
-                </div>
-              
-            
 
-       
-             <!-- Watch List -->
-                
-             <div class="column is-half">
-             <div class="box">
-          <h4>User Watch List</h4>
-          <div id="watchList"></div>
+            </div>
+            <div class="column">
+                <form class="box">
+                    <div class="field">
+                        <label class="label">Cryptocurrencies to Watch</label>
+                        <div class="control">
+                            <input id="cryptoInput" class="stock" type="Stock"
+                                placeholder="Enter Your Cryptocurrencies Here">
+                        </div>
+                    </div>
+                    <button class="button is-danger" id="cryptoButton">Add to Watch List</button>
+                </form>
+
+            </div>
+
+
+
+
         </div>
-      </div>
+
+
+        <div class="columns">
+            <div class="column is-half">
+                <div class="box">
+                    <h3>Trending Cryptocurrencies</h3>
+                    <div id="crypto"></div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Watch List -->
+
+            <div class="column is-half">
+                <div class="box">
+                    <h4>User Watch List</h4>
+                    <div id="watchList"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
-        
-  </div>
 
 </body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="Assets/stocks.js"></script>
 <script src="Assets/hotstocks.js"></script>
+
 
 </html>
