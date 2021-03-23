@@ -48,25 +48,31 @@ function getStock(ticker, el) {
     }).then(function (data) {
         console.log('DATA FOR ' + ticker, data);
         // update the element with the correct stock price
+        stocks.appendChild()
         el.textContent = 'NEW PRICE...';
     });
 }
 
-// function getStocks() {
-//     var apiKey = "mpKK72CcnhxsE_y4YCUv";
-//     var stock = "AAPL";
-//     var url = `https://www.quandl.com/api/v3/datasets/WIKI/${stock}.json?start_date=2016-10-01&end_date=2017-10-01&api_key=${apiKey}`;
-//     const ticker = document.getElementById("liveStock");
-//     fetch(url).then(function (response) {
-//         return response.json();
-//     }).then(function (data) {
-//         console.log(data);
-//         const columnNames = data.column_names;
-//         const info = data.data;
-//         ticker = document.getElementById("liveStock")
+var liveStockContainer = $('#liveStock');
 
-//     });
-// }
+function getStocks() {
+    var allTickers = stocks.tickers;
+    for(var i = 0; i < allTickers.length; i++) {
+        console.log(allTickers[i]);
+        var ticker = allTickers[i].ticker;
+        var url = allTickers[i].ticker;
+        var tickerContainer = $(".ticker-move");
+        var tickerDiv = $('<div class="ticker-item">');
+
+        tickerDiv.text(`${ticker} $20`);
+       
+        tickerContainer.append(tickerDiv);
+       
+       
+    }
+}
+getStocks();
+
 
 getHeaderStocks();
 console.log(stocks)
