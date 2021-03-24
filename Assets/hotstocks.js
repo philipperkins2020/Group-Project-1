@@ -77,6 +77,7 @@ function getStocks() {
         var url = allTickers[i].ticker;
         var tickerContainer = $(".ticker-move");
         var tickerDiv = $('<div class="ticker-item">');
+
         tickerDiv.text(`${ticker} $20`);
         tickerContainer.append(tickerDiv);
     }
@@ -87,17 +88,21 @@ getHeaderStocks();
 console.log(stocks)
 
 function saveStock() {
+
     var savedStocks = {
         stockOne: stockOne.value.trim(),
         cryptoOne: cryptoOne.value.trim(),
         stockTwo: stockTwo.value.trim(),
         cryptoTwo: cryptoTwo.value.trim()
     };
+
     localStorage.setItem("savedStocks", JSON.stringify(savedStocks));
 }
 
 function renderLastStock() {
+
     var lastSaved = JSON.parse(localStorage.getItem("savedStocks"));
+
     if (lastSaved !== null) {
         document.getElementById("saved-StockOne").innerHTML = lastSaved.stockOne;
         document.getElementById("saved-StockTwo").innerHTML = lastSaved.stockTwo;
@@ -115,6 +120,7 @@ stockButton.addEventListener("click", function (event) {
 });
 
 function init() {
+
     renderLastStock();
 }
 
@@ -125,6 +131,7 @@ cryptoButton.addEventListener("click", function (event) {
     saveStock();
     renderLastStock();
 });
+
 
 //Crypto Ticker
 function getHeaderStocks() {
