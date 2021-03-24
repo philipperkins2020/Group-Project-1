@@ -29,7 +29,7 @@
                 </a>
             </div>
 
-            <div id="navbarMenu" class="navbar-menu">
+          <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item">
                         Trending Stocks
@@ -71,7 +71,46 @@
             </div>
         </nav>
 
-        <!-- Ticker -->
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Trending Stocks
+                    </a>
+                    <a class="navbar-item">
+                        Trending Cryptocurrencies
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Watch List
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Stocks
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Cryptocurrencies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-danger">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-danger">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Stock Ticker -->
         <div class="columns">
             <div class="column">
                 <div class="box">
@@ -81,22 +120,28 @@
                         <div class="tcontainer">
                             <div class="ticker-wrap">
                                 <div class="ticker-move">
-                                    
-
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                  </div>
                 </div>
             </div>
         </div>
 
+        <!-- Crypto Ticker -->
         <div class="columns">
             <div class="column">
                 <div class="box">
                     <h1>Real-Time Crypto Exchange Ticker</h1>
-                    <div id="cryptoTick"></div>
+
+                    <div class="card">
+                        <div class="tcontainer">
+                            <div class="ticker-wrap">
+                                <div class="ticker-move">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,13 +182,8 @@
                 </form>
 
             </div>
-
-
-
-
         </div>
-
-
+          
         <div class="columns">
             <div class="column is-half">
                 <div class="box">
@@ -152,11 +192,7 @@
                 </div>
             </div>
 
-
-
-
             <!-- Watch List -->
-
             <div class="column is-half">
                 <div class="box">
                     <h4>User Watch List</h4>
@@ -170,12 +206,10 @@
                         <li id="saved-CrypOne"></li>
                         <br>
                         <li id="saved-CrypTwo"></li>
-
                     </Ul>
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>
