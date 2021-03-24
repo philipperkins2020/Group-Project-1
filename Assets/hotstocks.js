@@ -51,35 +51,60 @@ function getHeaderStocks() {
     // console.log('STOCK ITEMS: ', stockItems);
 }
 
-function getStock(ticker, el) {
-    var url = `https://www.quandl.com/api/v3/datasets/WIKI/${ticker}.json?start_date=2021-03-19&end_date=2021-03-20&api_key=${apiKey}`;
-    fetch(url).then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        console.log('DATA FOR ' + ticker, data);
-        // update the element with the correct stock price
-        stocks.appendChild()
-        el.textContent = 'NEW PRICE...';
-    });
-}
+// function getStock(ticker, el) {
+//     var url = `https://www.quandl.com/api/v3/datasets/WIKI/${ticker}.json?start_date=2021-03-19&end_date=2021-03-20&api_key=${apiKey}`;
+//     fetch(url).then(function (response) {
+//         return response.json();
+//     }).then(function (data) {
+//         console.log('DATA FOR ' + ticker, data);
+//         // update the element with the correct stock price
+//         stocks.appendChild()
+//         el.textContent = 'NEW PRICE...';
+//     });
+// }
 
 var liveStockContainer = $('#liveStock');
 
+// function getStocks() {
+//     var allTickers = stocks.tickers;
+//     for(var i = 0; i < allTickers.length; i++) {
+//         console.log(allTickers[i]);
+//         var ticker = allTickers[i].ticker;
+//         var url = allTickers[i].ticker;
+//         var tickerContainer = $(".ticker-move");
+//         var tickerDiv = $('<div class="ticker-item">');
+
+//         tickerDiv.text(`${ticker} $20`);
+       
+//         tickerContainer.append(tickerDiv);
+       
+       
+//     }
+// }
+
+
 function getStocks() {
     var allTickers = stocks.tickers;
-    for(var i = 0; i < allTickers.length; i++) {
-        console.log(allTickers[i]);
-        var ticker = allTickers[i].ticker;
-        var url = allTickers[i].ticker;
-        var tickerContainer = $(".ticker-move");
-        var tickerDiv = $('<div class="ticker-item">');
-
-        tickerDiv.text(`${ticker} $20`);
-       
-        tickerContainer.append(tickerDiv);
-       
-       
-    }
+    allTickers.forEach(async (stock) => {
+        var ticker = stock.ticker;
+        const res = await fetch(`https://limitless-scrubland-34093.herokuapp.com/api/v1/quote?symbol=${ticker}&token=c1domjn48v6sjvgfn1n0`).then((response) => {
+            return response.json();
+        }).then((data) => {
+            return data;
+        });
+        getPrice(stock, res);
+    })
+}
+// fetch('https://finnhub.io/api/v1/quote?symbol=AAPL&token=c1domjn48v6sjvgfn1n0').then(function(response) {
+//     return response.json();
+// }).then(function(data) {
+//     console.log(data);
+// });
+function getPrice(stock, price) {
+    var tickerContainer = $(".ticker-move");
+    var tickerDiv = $('<div class="ticker-item">');
+    tickerDiv.text(`${stock.ticker} $${price.c}`);
+    tickerContainer.append(tickerDiv);
 }
 getStocks();
 
