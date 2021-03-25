@@ -17,10 +17,12 @@ function saveStock(event) {
     console.log(topStock)
     localStorage.setItem("topStock", topStock);
 }
+
 // Save Value
 function stockValue() {
     return localStorage.getItem("topStock");
 }
+
 console.log(stockValue());
 document.getElementById("stockButton").addEventListener("click", saveStock)
 
@@ -31,10 +33,12 @@ function saveCrypto(event) {
     console.log(topCrypto)
     localStorage.setItem("topCrypto", topCrypto);
 }
+
 // Save Value
 function cryptoValue() {
     return localStorage.getItem("topCrypto");
 }
+
 console.log(cryptoValue());
 document.getElementById("cryptoButton").addEventListener("click", saveCrypto)
 
@@ -82,7 +86,7 @@ var liveStockContainer = $('#liveStock');
 //     }
 // }
 
-
+// Correct getStocks()
 function getStocks() {
     var allTickers = stocks.tickers;
     allTickers.forEach(async (stock) => {
@@ -100,15 +104,28 @@ function getStocks() {
 // }).then(function(data) {
 //     console.log(data);
 // });
+// function getStocks() {
+//     var allTickers = stocks.tickers;
+//     for(var i = 0; i < allTickers.length; i++) {
+//         console.log(allTickers[i]);
+//         var ticker = allTickers[i].ticker;
+//         var url = allTickers[i].ticker;
+//         var tickerContainer = $(".ticker-move");
+//         var tickerDiv = $('<div class="ticker-item">');
+
+//         tickerDiv.text(`${ticker} $20`);
+//         tickerContainer.append(tickerDiv);
+//     }
+// }
+
 function getPrice(stock, price) {
     var tickerContainer = $(".ticker-move");
     var tickerDiv = $('<div class="ticker-item">');
     tickerDiv.text(`${stock.ticker} $${price.c}`);
     tickerContainer.append(tickerDiv);
 }
+
 getStocks();
-
-
 getHeaderStocks();
 console.log(stocks)
 
@@ -137,6 +154,7 @@ function renderLastStock() {
         return;
     }
 }
+
 stockButton.addEventListener("click", function (event) {
     event.preventDefault();
     saveStock();
@@ -147,6 +165,7 @@ function init() {
 
     renderLastStock();
 }
+
 init();
 
 cryptoButton.addEventListener("click", function (event) {
@@ -155,3 +174,37 @@ cryptoButton.addEventListener("click", function (event) {
     renderLastStock();
 });
 
+
+// //Crypto Ticker
+// function getHeaderStocks() {
+//     var stockItems = stocks.tickers;
+//     stockItems.forEach(item => {
+//         console.log(item)
+//         // var dataItem = item.querySelector('.stock-data');
+//         // var ticker = dataItem.getAttribute('data-stock-id');
+//         // var elStockPrice = dataItem.querySelector('span');
+//         // console.log('TICKER', ticker);
+//         // getStock(ticker, elStockPrice);
+//     });
+//     // console.log('STOCK ITEMS: ', stockItems);
+// }
+
+// var liveStockContainer = $('#liveStock');
+
+// function getStocks() {
+//     var allTickers = stocks.tickers;
+//     for(var i = 0; i < allTickers.length; i++) {
+//         console.log(allTickers[i]);
+//         var ticker = allTickers[i].ticker;
+//         var url = allTickers[i].ticker;
+//         var tickerContainer = $(".ticker-move");
+//         var tickerDiv = $('<div class="ticker-item">');
+//         tickerDiv.text(`${ticker} $20`);
+//         tickerContainer.append(tickerDiv);
+//     }
+// }
+
+// getStocks();
+
+// getHeaderStocks();
+// console.log(stocks)
