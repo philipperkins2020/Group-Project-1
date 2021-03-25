@@ -46,47 +46,16 @@ function getHeaderStocks() {
     var stockItems = stocks.tickers;
     stockItems.forEach(item => {
         console.log(item)
-        // var dataItem = item.querySelector('.stock-data');
-        // var ticker = dataItem.getAttribute('data-stock-id');
-        // var elStockPrice = dataItem.querySelector('span');
-        // console.log('TICKER', ticker);
-        // getStock(ticker, elStockPrice);
+     
     });
-    // console.log('STOCK ITEMS: ', stockItems);
+   
 }
 
-// function getStock(ticker, el) {
-//     var url = `https://www.quandl.com/api/v3/datasets/WIKI/${ticker}.json?start_date=2021-03-19&end_date=2021-03-20&api_key=${apiKey}`;
-//     fetch(url).then(function (response) {
-//         return response.json();
-//     }).then(function (data) {
-//         console.log('DATA FOR ' + ticker, data);
-//         // update the element with the correct stock price
-//         stocks.appendChild()
-//         el.textContent = 'NEW PRICE...';
-//     });
-// }
+
 
 var liveStockContainer = $('#liveStock');
 
-// function getStocks() {
-//     var allTickers = stocks.tickers;
-//     for(var i = 0; i < allTickers.length; i++) {
-//         console.log(allTickers[i]);
-//         var ticker = allTickers[i].ticker;
-//         var url = allTickers[i].ticker;
-//         var tickerContainer = $(".ticker-move");
-//         var tickerDiv = $('<div class="ticker-item">');
 
-//         tickerDiv.text(`${ticker} $20`);
-       
-//         tickerContainer.append(tickerDiv);
-       
-       
-//     }
-// }
-
-// Correct getStocks()
 function getStocks() {
     var allTickers = stocks.tickers;
     allTickers.forEach(async (stock) => {
@@ -104,19 +73,7 @@ function getStocks() {
 // }).then(function(data) {
 //     console.log(data);
 // });
-// function getStocks() {
-//     var allTickers = stocks.tickers;
-//     for(var i = 0; i < allTickers.length; i++) {
-//         console.log(allTickers[i]);
-//         var ticker = allTickers[i].ticker;
-//         var url = allTickers[i].ticker;
-//         var tickerContainer = $(".ticker-move");
-//         var tickerDiv = $('<div class="ticker-item">');
 
-//         tickerDiv.text(`${ticker} $20`);
-//         tickerContainer.append(tickerDiv);
-//     }
-// }
 
 function getPrice(stock, price) {
     var tickerContainer = $(".ticker-move");
@@ -175,36 +132,3 @@ cryptoButton.addEventListener("click", function (event) {
 });
 
 
-// //Crypto Ticker
-// function getHeaderStocks() {
-//     var stockItems = stocks.tickers;
-//     stockItems.forEach(item => {
-//         console.log(item)
-//         // var dataItem = item.querySelector('.stock-data');
-//         // var ticker = dataItem.getAttribute('data-stock-id');
-//         // var elStockPrice = dataItem.querySelector('span');
-//         // console.log('TICKER', ticker);
-//         // getStock(ticker, elStockPrice);
-//     });
-//     // console.log('STOCK ITEMS: ', stockItems);
-// }
-
-// var liveStockContainer = $('#liveStock');
-
-// function getStocks() {
-//     var allTickers = stocks.tickers;
-//     for(var i = 0; i < allTickers.length; i++) {
-//         console.log(allTickers[i]);
-//         var ticker = allTickers[i].ticker;
-//         var url = allTickers[i].ticker;
-//         var tickerContainer = $(".ticker-move");
-//         var tickerDiv = $('<div class="ticker-item">');
-//         tickerDiv.text(`${ticker} $20`);
-//         tickerContainer.append(tickerDiv);
-//     }
-// }
-
-// getStocks();
-
-// getHeaderStocks();
-// console.log(stocks)
