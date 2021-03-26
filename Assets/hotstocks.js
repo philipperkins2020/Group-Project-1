@@ -130,5 +130,3 @@ cryptoButton.addEventListener("click", function (event) {
     saveStock();
     renderLastStock();
 });
-
-
