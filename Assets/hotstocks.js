@@ -60,7 +60,7 @@ function getStocks() {
     var allTickers = stocks.tickers;
     allTickers.forEach(async (stock) => {
         var ticker = stock.ticker;
-        const res = await fetch(`https://limitless-scrubland-34093.herokuapp.com/api/v1/quote?symbol=${ticker}&token=c1domjn48v6sjvgfn1n0`).then((response) => {
+        const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${ticker}&token=c199p7n48v6psigt97d0`).then((response) => {
             return response.json();
         }).then((data) => {
             return data;
