@@ -68,11 +68,6 @@ function getStocks() {
         getPrice(stock, res);
     })
 }
-// fetch('https://finnhub.io/api/v1/quote?symbol=AAPL&token=c1domjn48v6sjvgfn1n0').then(function(response) {
-//     return response.json();
-// }).then(function(data) {
-//     console.log(data);
-// });
 
 
 function getPrice(stock, price) {
