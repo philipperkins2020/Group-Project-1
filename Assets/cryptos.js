@@ -1,4 +1,4 @@
-var crypto = {
+var cryptos = {
     "page": 1,
     "perPage": 20,
     "count": 260,
