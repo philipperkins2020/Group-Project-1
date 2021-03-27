@@ -8,7 +8,8 @@ var topStockOne = document.getElementById("saved-StockOne");
 var topStockTwo = document.getElementById("saved-StockTwo");
 var topCrypto = document.getElementById("saved-CrypOne");
 var topCryptoTwo = document.getElementById("saved-CrypTwo")
-var apiKey = "mpKK72CcnhxsE_y4YCUv";
+var apiKey1 = "mpKK72CcnhxsE_y4YCUv";
+var apiKey2 = "qUFJM0c7knQIBQSjJRsT8XfC3phX299k";
 
 // Save var
 function saveStock(event) {
@@ -46,12 +47,8 @@ function getHeaderStocks() {
     var stockItems = stocks.tickers;
     stockItems.forEach(item => {
         console.log(item)
-     
-    });
-   
+    });   
 }
-
-
 
 var liveStockContainer = $('#liveStock');
 
@@ -80,6 +77,40 @@ function getPrice(stock, price) {
 getStocks();
 getHeaderStocks();
 console.log(stocks)
+
+//Crypto Ticker
+function getHeaderCryptos() {
+    var cryptoItems = cryptos.tickers;
+    cryptoItems.forEach(item => {
+        console.log(item)
+    });   
+}
+
+var liveCryptoContainer = $('#liveCrypto');
+
+function getCryptos() {
+    var cryptoTickers = cryptos.tickers;
+    cryptoTickers.forEach(async (crypto) => {
+        var cryptoTicker = crypto.cryptoTicker;
+        const res = await fetch(`https://api.polygon.io/v2/reference/tickers?symbol=${cryptoTicker}sort=ticker&market=CRYPTO&perpage=20&page=1&active=true&apiKey=qUFJM0c7knQIBQSjJRsT8XfC3phX299k`).then((response) => {
+            return response.json();
+        }).then((data) => {
+            return data;
+        });
+        getCryptoPrice(crypto, res);
+    })
+}
+
+function getCryptoPrice(crypto, cryptoPrice) {
+    var tickerContainer = $(".crypto-ticker-move");
+    var tickerDiv = $('<div class="ticker-item">');
+    tickerDiv.text(`${crypto.cryptoTicker} $${cryptoPrice.c}`);
+    tickerContainer.append(tickerDiv);
+}
+
+getCryptos();
+getHeaderCryptos();
+console.log(cryptos)
 
 function saveStock() {
 
