@@ -60,7 +60,7 @@ function getStocks() {
     var allTickers = stocks.tickers;
     allTickers.forEach(async (stock) => {
         var ticker = stock.ticker;
-        const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${ticker}&token=c199p7n48v6psigt97d0`).then((response) => {
+        const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${ticker}&token=c1fk22n48v6r34ehdeag`).then((response) => {
             return response.json();
         }).then((data) => {
             return data;
@@ -78,8 +78,8 @@ function getPrice(stock, price) {
 }
 
 getStocks();
-getHeaderStocks();
-console.log(stocks)
+    getHeaderStocks();
+    console.log(stocks)
 
 function saveStock() {
 
