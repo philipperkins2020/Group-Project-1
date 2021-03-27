@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,31 +10,31 @@
     <title>HOTSTOCKS</title>
     <link rel="icon" href="assets/favicon.png">
 </head>
-
+​
 <body>
     <!-- Body -->
     <div class="container">
-
+​
         <!-- Nav Bar -->
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-logo" href="">
                     <img src="assets/hotstocks_logo_transp.png">
                 </a>
-
+​
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-
+​
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item">
                         Stocks News
                     </a>
-
+​
                     <a class="navbar-item">
                         Cryptocurrency News
                     </a>
@@ -42,12 +42,12 @@
                         Forum 
                         <br>*Coming Soon*
                     </a>
-
+​
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
                             Watch List
                         </a>
-
+​
                         <div class="navbar-dropdown">
                             <a class="navbar-item">
                                 Stocks
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-
+​
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-
+​
         <!-- Crypto Ticker -->
         <div class="columns">
             <div class="column is-full">
@@ -100,7 +100,7 @@
                     <div class="card">
                         <div class="tcontainer">
                             <div class="ticker-wrap">
-                                <div class="ticker-move">
+                                <div class="crypto-ticker-move">
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </div>
-
+​
         <!-- Stocks of the day -->
         <div class="columns">
             <div class="column is-half">
@@ -124,15 +124,15 @@
                             Top Gainers
                         </a>
                     </p>
-
+​
                     <div id="topStocks"></div>
-
+​
                     
                 </div>
-
+​
             </div>
-
-
+​
+​
             <div class="column">
                 <form class="box">
                     <div class="field">
@@ -144,7 +144,7 @@
                     </div>
                     <button class="button is-danger" id="stockButton">Add to Watch List</button>
                 </form>
-
+​
             </div>
             <div class="column">
                 <form class="box">
@@ -159,10 +159,10 @@
                     </div>
                     <button class="button is-danger" id="cryptoButton">Add to Watch List</button>
                 </form>
-
+​
             </div>
         </div>
-
+​
         <div class="columns">
             <div class="column is-half">
                 <div class="box">
@@ -178,7 +178,7 @@
                     <div id="crypto"></div>
                 </div>
             </div>
-
+​
             <!-- Watch List -->
             <div class="column is-half">
                 <div class="box">
@@ -198,12 +198,13 @@
             </div>
         </div>
     </div>
-
+​
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/cryptos.js"></script>
 <script src="assets/stocks.js"></script>
 <script src="assets/cryptos.js"></script>
 <script src="assets/hotstocks.js"></script>
-
-
+​
+​
 </html>
